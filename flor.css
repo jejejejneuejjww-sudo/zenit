@@ -1,0 +1,490 @@
+/* --- CONFIGURACIÓN GENERAL Y FONDO --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    color: white;
+}
+
+
+/* --- ESTRELLAS FUGACES (FONDO) --- */
+/* EFECTO NEBULOSA/GALAXIA AL FONDO */
+.night::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Creamos manchas de color suaves */
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(75, 0, 130, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(0, 0, 255, 0.1), transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(139, 0, 139, 0.05), transparent 50%);
+    z-index: -3; /* Por detrás de todas las estrellas */
+    filter: blur(50px); /* Difumina los colores para que parezcan gas espacial */
+}
+
+/* Estrellas Fugaces */
+.shooting-stars {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+}
+
+.shooting-star {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,1));
+    animation: tail 3s ease-in-out infinite, shooting 3s ease-in-out infinite;
+    opacity: 0; /* Empiezan invisibles */
+}
+
+@keyframes tail {
+    0% { width: 0; }
+    30% { width: 100px; }
+    100% { width: 0; }
+}
+
+@keyframes shooting {
+    0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
+    100% { transform: translateX(300px) translateY(300px) rotate(45deg); opacity: 0; }
+}
+/* --- ESTRELLAS ESTÁTICAS (FONDO) --- */
+
+/* 1. El contenedor que ocupa toda la pantalla */
+.static-stars {
+    position: fixed;       /* Se queda fijo aunque hagas scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;           /* Se asegura de estar detrás de los elementos */
+    pointer-events: none;  /* Permite dar clic a través de ellas */
+}
+
+/* 2. El estilo de cada puntito (estrella) */
+.static-star {
+    position: absolute;
+    background-color: white; 
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.9); /* Resplandor para que brillen más */
+    opacity: 0.9;
+    
+    /* Animación de parpadeo */
+    animation: twinkle var(--duration, 3s) infinite ease-in-out;
+}
+
+/* 3. La animación del parpadeo */
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.4; 
+        transform: scale(0.8); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.2); 
+    }
+}
+
+/* ESTILO DE LA NOVA (ESTRELLA GIGANTE) */
+.nova {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 2px white, 0 0 40px 5px rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    animation: pulse-nova 4s infinite ease-in-out;
+}
+
+/* Los destellos en cruz */
+.nova::before, .nova::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 0 10px white;
+}
+
+/* Línea horizontal del destello */
+.nova::before {
+    width: 30px;
+    height: 1px;
+}
+
+/* Línea vertical del destello */
+.nova::after {
+    width: 1px;
+    height: 30px;
+}
+
+@keyframes pulse-nova {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* ESTILO DE LAS GALAXIAS */
+.galaxy {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px); /* Esto crea el efecto de gas */
+    z-index: -3; /* Detrás de todas las estrellas */
+    opacity: 0.4;
+    mix-blend-mode: screen; /* Para que los colores se mezclen bonito con el fondo */
+    animation: rotate-galaxy 100s linear infinite;
+}
+
+/* Galaxia 1: Tono Púrpura/Azul */
+.galaxy-1 {
+    width: 500px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(106, 13, 173, 0.6) 0%, rgba(0, 0, 255, 0.2) 50%, transparent 70%);
+    top: 10%;
+    left: -10%;
+    transform: rotate(-20deg);
+}
+
+/* Galaxia 2: Tono Rosado/Naranja (Cerca de las flores) */
+.galaxy-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.4) 0%, rgba(255, 165, 0, 0.1) 50%, transparent 70%);
+    bottom: 5%;
+    right: -5%;
+}
+
+@keyframes rotate-galaxy {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- CONTENEDOR PRINCIPAL DEL CANDADO --- */
+.lock-wrapper {
+    position: relative;
+    z-index: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 230px;
+}
+
+
+/* --- SHACKLE (ARCO DEL CANDADO) --- */
+.shackle {
+    width: 120px;
+    height: 110px;
+    border: 12px solid #bdc3c7;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom: 0;
+    position: relative;
+    top: 30px;
+    z-index: 1;
+    background: transparent;
+}
+
+
+/* --- CUERPO DEL CANDADO --- */
+.lock-container {
+    background: linear-gradient(135deg, #f4d03f 0%, #e6b333 100%);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.5),
+        inset 2px 2px 5px rgba(255,255,255,0.4),
+        inset -2px -2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    border: 2px solid #d4a017;
+}
+
+.lock-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* --- RUEDAS Y NÚMEROS --- */
+.wheels {
+    display: flex;
+    gap: 15px;
+    background: rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.wheel {
+    width: 50px;
+    height: 60px;
+    background: #3e2723;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    border: 1px solid #5d4037;
+}
+
+.wheel span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Botones ↑ ↓ */
+.wheel-buttons button {
+    background: #5D4037;
+    border: none;
+    color: white;
+    width: 15px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+
+
+/* --- TEXTO DE ESTADO --- */
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    min-height: 20px;
+}
+
+:root {
+    --primary-gold: #fbc02d;
+    --sparkle-color: #fff7e6;
+}
+/*CARRUSEL DE LAS IMAGENES*/
+.carousel { 
+    position: relative; 
+    height: 500px; 
+    max-width: 900px; 
+    margin: 50px auto; 
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* Imagen con efecto de zoom suave */
+.image-container { 
+    position: absolute; 
+    inset: 0; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.image-container.active { 
+    opacity: 1; 
+    transform: scale(1);
+    transition: opacity 1s ease, transform 6s linear; /* Efecto Ken Burns */
+}
+
+.image-container img { 
+    width: 100%; height: 100%; object-fit: cover; 
+}
+
+/* Partículas de Chispas */
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 15;
+    box-shadow: 0 0 10px var(--primary-gold);
+}
+
+@keyframes fly {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+/* Navegación y Progreso */
+.carousel-nav button {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0,0,0,0.5); border: none;
+    color: white; font-size: 2.5rem; cursor: pointer; z-index: 20;
+    width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+#next-slide { right: 20px; }
+#prev-slide { left: 20px; }
+
+/* Anillo de progreso circular */
+.progress-ring {
+    position: absolute;
+    transform: rotate(-90deg);
+}
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.1s linear;
+    stroke-dasharray: 163.36; /* 2 * PI * r */
+    stroke-dashoffset: 163.36;
+}
+
+/* Puntos indicadores */
+.dots-container {
+    position: absolute; bottom: 20px; display: flex; gap: 10px; z-index: 20;
+}
+.dot {
+    width: 10px; height: 10px; background: rgba(255,255,255,0.3);
+    border-radius: 50%; cursor: pointer; transition: 0.3s;
+}
+.dot.active { background: var(--primary-gold); transform: scale(1.3); }
+
+
+/* --- FLORES GRANDES (GIRASOLES) --- */
+.flowers {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    width: 150%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 0 22px rgba(211, 198, 128, 0.55));/*contorno para hacer brillar al rededor*/
+}
+
+.flower__leaf {
+    background-color: #c77dff !important;
+    border-radius: 50px !important;
+    position: absolute;
+    width: 40px;
+    height: 100px;/*PARTE pARA LOS PETALOS*/
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom center;
+    box-shadow: inset 0 0 14px rgba(125, 101, 148, 0.918);
+}
+
+.flower__white-circle {
+    background-color: #fdc200d8 !important;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    border: 5px solid #fdae03;
+}
+
+.flower {
+    position: absolute;
+    top: 150px;
+    transform-origin: bottom center;
+}
+
+/* 1. Definimos la animación de balanceo suave */
+@keyframes sway {
+    0% { 
+        /* Mantiene tu posición y resta 2 grados a tu rotación original */
+        transform: var(--pos) rotate(calc(var(--rot) - 2deg)); 
+    }
+    100% { 
+        /* Mantiene tu posición y suma 2 grados a tu rotación original */
+        transform: var(--pos) rotate(calc(var(--rot) + 2deg)); 
+    }
+}
+
+/* 2. Definimos el polen (más lento y sutil) */
+.flower__light {
+    width: 4px;
+    height: 4px;
+    background-color: #fff7d6; 
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    filter: blur(1px);
+    animation: float-pollen 8s ease-in-out infinite;
+}
+
+@keyframes float-pollen {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 0.6; }
+    100% { transform: translateY(-300px) translateX(20px); opacity: 0; }
+}
+
+/* 3. Aplicamos todo a las flores */
+.flower {
+    position: absolute;
+    top: 150px;
+    transform-origin: bottom center; /* Hace que el tallo no se despegue del suelo */
+    animation: sway 4s ease-in-out infinite alternate;
+}
+
+/* Aquí guardamos tus coordenadas originales para que la animación las use */
+.flower--1 { --pos: translate(-170px, 40px) scale(0.9); --rot: -20deg; animation-delay: 0.1s; }
+.flower--2 { --pos: translate(180px, 45px) scale(0.9); --rot: 20deg; animation-delay: 0.3s; }
+.flower--3 { --pos: translate(0, -70px) scale(1.15); --rot: 0deg; animation-delay: 0s; }
+.flower--4 { --pos: translate(-90px, 25px) scale(0.85); --rot: -12deg; animation-delay: 0.5s; }
+.flower--5 { --pos: translate(80px, -15px) scale(0.85); --rot: 28deg; animation-delay: 0.2s; }
+
+.flower__line {
+    width: 6px;
+    height: 380px;
+    background: #2e7d32;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.flower__line__leaf {
+    background: #4caf50;
+    width: 20px;
+    height: 40px;
+    border-radius: 20px 0;
+    position: absolute;
+}
+
+.flower__line__leaf--1 { top: 20%; left: 0; transform: rotate(-30deg); }
+.flower__line__leaf--2 { top: 40%; right: 0; transform: rotate(30deg); }
+

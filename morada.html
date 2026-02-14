@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <link rel="stylesheet" href="morada.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+      
+ <div class="music-control">
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="Untill found you.mp4" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn">
+        <i class="fas fa-play" id="playIcon"></i>
+        <i class="fas fa-pause" id="pauseIcon" style="display:none;"></i>
+    </button>
+    
+    <div class="volume-container" id="volumeControl">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+    </div>
+</div>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;display=swap" rel="stylesheet">
+  
+      
+    
+<div id="starry-sky"><div class="twinkling-star" style="top: 52.4044%; left: 92.7133%; width: 1.95646px; height: 1.95646px; animation-duration: 3.59082s; animation-delay: 1.89036s;"></div><div class="twinkling-star" style="top: 45.9963%; left: 38.8934%; width: 1.25405px; height: 1.25405px; animation-duration: 3.93611s; animation-delay: 1.26814s;"></div><div class="twinkling-star" style="top: 77.8946%; left: 70.5413%; width: 2.56492px; height: 2.56492px; animation-duration: 4.77487s; animation-delay: 0.00653473s;"></div><div class="twinkling-star" style="top: 29.3957%; left: 4.23167%; width: 2.59549px; height: 2.59549px; animation-duration: 2.17612s; animation-delay: 1.19662s;"></div><div class="twinkling-star" style="top: 14.1825%; left: 34.9762%; width: 1.15855px; height: 1.15855px; animation-duration: 3.57625s; animation-delay: 2.60529s;"></div><div class="twinkling-star" style="top: 74.8047%; left: 90.4651%; width: 2.03351px; height: 2.03351px; animation-duration: 2.76804s; animation-delay: 0.996216s;"></div><div class="twinkling-star" style="top: 34.4482%; left: 90.3784%; width: 2.62792px; height: 2.62792px; animation-duration: 3.8488s; animation-delay: 0.568337s;"></div><div class="twinkling-star" style="top: 60.9543%; left: 18.6455%; width: 1.58667px; height: 1.58667px; animation-duration: 4.53873s; animation-delay: 2.96401s;"></div><div class="twinkling-star" style="top: 61.2587%; left: 59.775%; width: 1.74568px; height: 1.74568px; animation-duration: 4.70433s; animation-delay: 1.14343s;"></div><div class="twinkling-star" style="top: 44.1532%; left: 84.5024%; width: 2.6845px; height: 2.6845px; animation-duration: 4.20349s; animation-delay: 2.11914s;"></div><div class="twinkling-star" style="top: 7.39147%; left: 3.42547%; width: 2.03788px; height: 2.03788px; animation-duration: 4.2567s; animation-delay: 2.51242s;"></div><div class="twinkling-star" style="top: 37.722%; left: 70.2774%; width: 2.96905px; height: 2.96905px; animation-duration: 3.46153s; animation-delay: 2.52513s;"></div><div class="twinkling-star" style="top: 71.547%; left: 3.28637%; width: 2.1702px; height: 2.1702px; animation-duration: 3.72809s; animation-delay: 0.115645s;"></div><div class="twinkling-star" style="top: 71.3436%; left: 8.20044%; width: 1.07802px; height: 1.07802px; animation-duration: 2.16891s; animation-delay: 2.14268s;"></div><div class="twinkling-star" style="top: 14.9117%; left: 96.7373%; width: 1.76231px; height: 1.76231px; animation-duration: 4.48581s; animation-delay: 0.537763s;"></div><div class="twinkling-star" style="top: 83.6747%; left: 36.3601%; width: 2.41721px; height: 2.41721px; animation-duration: 4.01298s; animation-delay: 2.81553s;"></div><div class="twinkling-star" style="top: 67.7696%; left: 58.9222%; width: 2.62147px; height: 2.62147px; animation-duration: 3.52778s; animation-delay: 1.94792s;"></div><div class="twinkling-star" style="top: 67.2163%; left: 84.1981%; width: 2.14398px; height: 2.14398px; animation-duration: 3.14514s; animation-delay: 2.67758s;"></div><div class="twinkling-star" style="top: 83.2536%; left: 26.5962%; width: 2.27416px; height: 2.27416px; animation-duration: 3.09245s; animation-delay: 0.862433s;"></div><div class="twinkling-star" style="top: 25.0677%; left: 25.7556%; width: 2.94009px; height: 2.94009px; animation-duration: 3.81453s; animation-delay: 0.0591301s;"></div><div class="twinkling-star" style="top: 56.9314%; left: 11.9281%; width: 2.25083px; height: 2.25083px; animation-duration: 3.81064s; animation-delay: 1.27655s;"></div><div class="twinkling-star" style="top: 43.7405%; left: 22.8826%; width: 1.01689px; height: 1.01689px; animation-duration: 3.77813s; animation-delay: 1.55382s;"></div><div class="twinkling-star" style="top: 39.485%; left: 54.1322%; width: 1.39694px; height: 1.39694px; animation-duration: 2.9422s; animation-delay: 0.07564s;"></div><div class="twinkling-star" style="top: 95.0161%; left: 25.415%; width: 2.51328px; height: 2.51328px; animation-duration: 4.26901s; animation-delay: 0.258259s;"></div><div class="twinkling-star" style="top: 54.5243%; left: 5.54823%; width: 2.26894px; height: 2.26894px; animation-duration: 3.20074s; animation-delay: 0.636355s;"></div><div class="twinkling-star" style="top: 97.1787%; left: 68.0632%; width: 2.5882px; height: 2.5882px; animation-duration: 4.80281s; animation-delay: 1.97988s;"></div><div class="twinkling-star" style="top: 61.5209%; left: 49.5665%; width: 2.58701px; height: 2.58701px; animation-duration: 3.98095s; animation-delay: 2.97758s;"></div><div class="twinkling-star" style="top: 92.4208%; left: 49.3435%; width: 1.81478px; height: 1.81478px; animation-duration: 3.57596s; animation-delay: 1.32889s;"></div><div class="twinkling-star" style="top: 90.4254%; left: 57.0147%; width: 2.3848px; height: 2.3848px; animation-duration: 3.38542s; animation-delay: 1.76332s;"></div><div class="twinkling-star" style="top: 45.2619%; left: 67.9217%; width: 1.29691px; height: 1.29691px; animation-duration: 3.05518s; animation-delay: 0.955247s;"></div><div class="twinkling-star" style="top: 77.9723%; left: 75.4093%; width: 2.43562px; height: 2.43562px; animation-duration: 3.71661s; animation-delay: 2.31828s;"></div><div class="twinkling-star" style="top: 13.7276%; left: 34.8345%; width: 2.3207px; height: 2.3207px; animation-duration: 2.60764s; animation-delay: 0.122722s;"></div><div class="twinkling-star" style="top: 3.69498%; left: 64.1164%; width: 2.8864px; height: 2.8864px; animation-duration: 3.61535s; animation-delay: 1.04609s;"></div><div class="twinkling-star" style="top: 78.3032%; left: 41.9934%; width: 2.19062px; height: 2.19062px; animation-duration: 2.74783s; animation-delay: 2.21105s;"></div><div class="twinkling-star" style="top: 12.3185%; left: 58.092%; width: 1.14369px; height: 1.14369px; animation-duration: 4.79487s; animation-delay: 1.26711s;"></div><div class="twinkling-star" style="top: 23.6652%; left: 80.5928%; width: 1.8114px; height: 1.8114px; animation-duration: 2.3724s; animation-delay: 0.821484s;"></div><div class="twinkling-star" style="top: 50.4725%; left: 36.9689%; width: 1.59477px; height: 1.59477px; animation-duration: 2.07041s; animation-delay: 1.45844s;"></div><div class="twinkling-star" style="top: 71.1876%; left: 88.3838%; width: 2.06644px; height: 2.06644px; animation-duration: 4.41863s; animation-delay: 1.74701s;"></div><div class="twinkling-star" style="top: 66.6483%; left: 84.786%; width: 1.49585px; height: 1.49585px; animation-duration: 3.32781s; animation-delay: 0.212385s;"></div><div class="twinkling-star" style="top: 6.54185%; left: 80.9436%; width: 1.49422px; height: 1.49422px; animation-duration: 4.28155s; animation-delay: 1.72395s;"></div><div class="twinkling-star" style="top: 7.56877%; left: 23.1225%; width: 1.29174px; height: 1.29174px; animation-duration: 2.10984s; animation-delay: 1.53998s;"></div><div class="twinkling-star" style="top: 90.298%; left: 49.4433%; width: 2.37504px; height: 2.37504px; animation-duration: 2.05246s; animation-delay: 2.40349s;"></div><div class="twinkling-star" style="top: 27.2966%; left: 16.8286%; width: 2.91472px; height: 2.91472px; animation-duration: 2.8819s; animation-delay: 1.15175s;"></div><div class="twinkling-star" style="top: 53.5566%; left: 68.7676%; width: 1.12464px; height: 1.12464px; animation-duration: 2.18338s; animation-delay: 1.74293s;"></div><div class="twinkling-star" style="top: 23.7041%; left: 64.4561%; width: 1.67894px; height: 1.67894px; animation-duration: 3.4862s; animation-delay: 1.63462s;"></div><div class="twinkling-star" style="top: 61.9582%; left: 86.8443%; width: 2.23381px; height: 2.23381px; animation-duration: 3.94657s; animation-delay: 1.50435s;"></div><div class="twinkling-star" style="top: 72.4338%; left: 80.3272%; width: 2.75396px; height: 2.75396px; animation-duration: 4.76022s; animation-delay: 2.27806s;"></div><div class="twinkling-star" style="top: 31.3573%; left: 62.382%; width: 2.76054px; height: 2.76054px; animation-duration: 2.05934s; animation-delay: 2.84252s;"></div><div class="twinkling-star" style="top: 75.4553%; left: 77.2993%; width: 1.8922px; height: 1.8922px; animation-duration: 2.3952s; animation-delay: 1.89861s;"></div><div class="twinkling-star" style="top: 92.0401%; left: 6.47657%; width: 2.90033px; height: 2.90033px; animation-duration: 2.50798s; animation-delay: 0.474629s;"></div><div class="twinkling-star" style="top: 84.7511%; left: 37.8958%; width: 1.28734px; height: 1.28734px; animation-duration: 2.71009s; animation-delay: 2.97681s;"></div><div class="twinkling-star" style="top: 57.3557%; left: 80.7422%; width: 2.52552px; height: 2.52552px; animation-duration: 2.5722s; animation-delay: 0.359641s;"></div><div class="twinkling-star" style="top: 2.19725%; left: 29.8924%; width: 2.13412px; height: 2.13412px; animation-duration: 3.30974s; animation-delay: 2.27775s;"></div><div class="twinkling-star" style="top: 81.8553%; left: 19.6201%; width: 1.27738px; height: 1.27738px; animation-duration: 3.95473s; animation-delay: 2.12711s;"></div><div class="twinkling-star" style="top: 44.0108%; left: 1.68936%; width: 2.53058px; height: 2.53058px; animation-duration: 2.54654s; animation-delay: 0.946359s;"></div><div class="twinkling-star" style="top: 31.5163%; left: 68.1256%; width: 1.48046px; height: 1.48046px; animation-duration: 4.9341s; animation-delay: 0.395962s;"></div><div class="twinkling-star" style="top: 71.9013%; left: 19.409%; width: 2.70597px; height: 2.70597px; animation-duration: 3.0492s; animation-delay: 0.405087s;"></div><div class="twinkling-star" style="top: 39.6002%; left: 22.8157%; width: 1.08612px; height: 1.08612px; animation-duration: 2.98846s; animation-delay: 0.39477s;"></div><div class="twinkling-star" style="top: 69.5175%; left: 78.3349%; width: 2.03659px; height: 2.03659px; animation-duration: 4.44489s; animation-delay: 1.32277s;"></div><div class="twinkling-star" style="top: 27.5073%; left: 32.7005%; width: 1.4946px; height: 1.4946px; animation-duration: 4.39219s; animation-delay: 2.64523s;"></div><div class="shooting-star" style="top: -422.021px; left: 1686.33px; animation-duration: 3.22395s; animation-delay: 8.57855s;"></div><div class="shooting-star" style="top: -327.739px; left: 1573.36px; animation-duration: 1.55231s; animation-delay: 5.52819s;"></div><div class="shooting-star" style="top: -121.389px; left: 908.675px; animation-duration: 1.52974s; animation-delay: 6.84996s;"></div></div>
+
+<div class="background-particles"><div class="particle" style="left: 58.7498vw; animation-duration: 8.71915s; width: 3.99766px; height: 3.99766px; animation-delay: 5.51574s;"></div><div class="particle" style="left: 53.3153vw; animation-duration: 9.957s; width: 3.01338px; height: 3.01338px; animation-delay: 3.51021s;"></div><div class="particle" style="left: 15.4401vw; animation-duration: 11.3777s; width: 1.421px; height: 1.421px; animation-delay: 8.60337s;"></div><div class="particle" style="left: 53.1854vw; animation-duration: 13.1853s; width: 1.53678px; height: 1.53678px; animation-delay: 9.30835s;"></div><div class="particle" style="left: 50.1611vw; animation-duration: 14.4207s; width: 3.37933px; height: 3.37933px; animation-delay: 9.85284s;"></div><div class="particle" style="left: 95.2016vw; animation-duration: 12.8164s; width: 1.38893px; height: 1.38893px; animation-delay: 7.79463s;"></div><div class="particle" style="left: 78.2781vw; animation-duration: 11.4044s; width: 1.65882px; height: 1.65882px; animation-delay: 2.80825s;"></div><div class="particle" style="left: 23.7345vw; animation-duration: 9.69176s; width: 1.56826px; height: 1.56826px; animation-delay: 7.97684s;"></div><div class="particle" style="left: 87.3327vw; animation-duration: 7.96466s; width: 3.18376px; height: 3.18376px; animation-delay: 5.23927s;"></div><div class="particle" style="left: 4.65264vw; animation-duration: 7.39939s; width: 1.534px; height: 1.534px; animation-delay: 5.66616s;"></div><div class="particle" style="left: 97.4554vw; animation-duration: 10.9362s; width: 2.35435px; height: 2.35435px; animation-delay: 2.28694s;"></div><div class="particle" style="left: 63.5669vw; animation-duration: 13.2081s; width: 2.20831px; height: 2.20831px; animation-delay: 7.32626s;"></div><div class="particle" style="left: 62.5833vw; animation-duration: 13.5911s; width: 3.06784px; height: 3.06784px; animation-delay: 0.468624s;"></div><div class="particle" style="left: 86.2797vw; animation-duration: 8.30904s; width: 1.25234px; height: 1.25234px; animation-delay: 1.64117s;"></div><div class="particle" style="left: 1.18969vw; animation-duration: 7.87742s; width: 2.29796px; height: 2.29796px; animation-delay: 8.06695s;"></div><div class="particle" style="left: 24.6103vw; animation-duration: 14.8316s; width: 3.74862px; height: 3.74862px; animation-delay: 5.18367s;"></div><div class="particle" style="left: 47.1674vw; animation-duration: 10.9971s; width: 1.39824px; height: 1.39824px; animation-delay: 4.11556s;"></div><div class="particle" style="left: 21.4878vw; animation-duration: 7.42091s; width: 1.55673px; height: 1.55673px; animation-delay: 6.0767s;"></div><div class="particle" style="left: 65.0409vw; animation-duration: 10.4417s; width: 2.84333px; height: 2.84333px; animation-delay: 4.73608s;"></div><div class="particle" style="left: 27.1449vw; animation-duration: 12.0017s; width: 3.74022px; height: 3.74022px; animation-delay: 1.25763s;"></div><div class="particle" style="left: 69.6283vw; animation-duration: 10.2993s; width: 1.04792px; height: 1.04792px; animation-delay: 6.23524s;"></div><div class="particle" style="left: 10.7387vw; animation-duration: 11.216s; width: 3.76461px; height: 3.76461px; animation-delay: 2.16828s;"></div><div class="particle" style="left: 93.3266vw; animation-duration: 10.8363s; width: 1.58328px; height: 1.58328px; animation-delay: 6.49349s;"></div><div class="particle" style="left: 34.4347vw; animation-duration: 10.3123s; width: 2.60426px; height: 2.60426px; animation-delay: 5.76551s;"></div><div class="particle" style="left: 81.6018vw; animation-duration: 9.27822s; width: 3.47706px; height: 3.47706px; animation-delay: 0.206947s;"></div></div>
+
+
+    <div id="starry-sky"><div class="twinkling-star" style="top: 52.4044%; left: 92.7133%; width: 1.95646px; height: 1.95646px; animation-duration: 3.59082s; animation-delay: 1.89036s;"></div><div class="twinkling-star" style="top: 45.9963%; left: 38.8934%; width: 1.25405px; height: 1.25405px; animation-duration: 3.93611s; animation-delay: 1.26814s;"></div><div class="twinkling-star" style="top: 77.8946%; left: 70.5413%; width: 2.56492px; height: 2.56492px; animation-duration: 4.77487s; animation-delay: 0.00653473s;"></div><div class="twinkling-star" style="top: 29.3957%; left: 4.23167%; width: 2.59549px; height: 2.59549px; animation-duration: 2.17612s; animation-delay: 1.19662s;"></div><div class="twinkling-star" style="top: 14.1825%; left: 34.9762%; width: 1.15855px; height: 1.15855px; animation-duration: 3.57625s; animation-delay: 2.60529s;"></div><div class="twinkling-star" style="top: 74.8047%; left: 90.4651%; width: 2.03351px; height: 2.03351px; animation-duration: 2.76804s; animation-delay: 0.996216s;"></div><div class="twinkling-star" style="top: 34.4482%; left: 90.3784%; width: 2.62792px; height: 2.62792px; animation-duration: 3.8488s; animation-delay: 0.568337s;"></div><div class="twinkling-star" style="top: 60.9543%; left: 18.6455%; width: 1.58667px; height: 1.58667px; animation-duration: 4.53873s; animation-delay: 2.96401s;"></div><div class="twinkling-star" style="top: 61.2587%; left: 59.775%; width: 1.74568px; height: 1.74568px; animation-duration: 4.70433s; animation-delay: 1.14343s;"></div><div class="twinkling-star" style="top: 44.1532%; left: 84.5024%; width: 2.6845px; height: 2.6845px; animation-duration: 4.20349s; animation-delay: 2.11914s;"></div><div class="twinkling-star" style="top: 7.39147%; left: 3.42547%; width: 2.03788px; height: 2.03788px; animation-duration: 4.2567s; animation-delay: 2.51242s;"></div><div class="twinkling-star" style="top: 37.722%; left: 70.2774%; width: 2.96905px; height: 2.96905px; animation-duration: 3.46153s; animation-delay: 2.52513s;"></div><div class="twinkling-star" style="top: 71.547%; left: 3.28637%; width: 2.1702px; height: 2.1702px; animation-duration: 3.72809s; animation-delay: 0.115645s;"></div><div class="twinkling-star" style="top: 71.3436%; left: 8.20044%; width: 1.07802px; height: 1.07802px; animation-duration: 2.16891s; animation-delay: 2.14268s;"></div><div class="twinkling-star" style="top: 14.9117%; left: 96.7373%; width: 1.76231px; height: 1.76231px; animation-duration: 4.48581s; animation-delay: 0.537763s;"></div><div class="twinkling-star" style="top: 83.6747%; left: 36.3601%; width: 2.41721px; height: 2.41721px; animation-duration: 4.01298s; animation-delay: 2.81553s;"></div><div class="twinkling-star" style="top: 67.7696%; left: 58.9222%; width: 2.62147px; height: 2.62147px; animation-duration: 3.52778s; animation-delay: 1.94792s;"></div><div class="twinkling-star" style="top: 67.2163%; left: 84.1981%; width: 2.14398px; height: 2.14398px; animation-duration: 3.14514s; animation-delay: 2.67758s;"></div><div class="twinkling-star" style="top: 83.2536%; left: 26.5962%; width: 2.27416px; height: 2.27416px; animation-duration: 3.09245s; animation-delay: 0.862433s;"></div><div class="twinkling-star" style="top: 25.0677%; left: 25.7556%; width: 2.94009px; height: 2.94009px; animation-duration: 3.81453s; animation-delay: 0.0591301s;"></div><div class="twinkling-star" style="top: 56.9314%; left: 11.9281%; width: 2.25083px; height: 2.25083px; animation-duration: 3.81064s; animation-delay: 1.27655s;"></div><div class="twinkling-star" style="top: 43.7405%; left: 22.8826%; width: 1.01689px; height: 1.01689px; animation-duration: 3.77813s; animation-delay: 1.55382s;"></div><div class="twinkling-star" style="top: 39.485%; left: 54.1322%; width: 1.39694px; height: 1.39694px; animation-duration: 2.9422s; animation-delay: 0.07564s;"></div><div class="twinkling-star" style="top: 95.0161%; left: 25.415%; width: 2.51328px; height: 2.51328px; animation-duration: 4.26901s; animation-delay: 0.258259s;"></div><div class="twinkling-star" style="top: 54.5243%; left: 5.54823%; width: 2.26894px; height: 2.26894px; animation-duration: 3.20074s; animation-delay: 0.636355s;"></div><div class="twinkling-star" style="top: 97.1787%; left: 68.0632%; width: 2.5882px; height: 2.5882px; animation-duration: 4.80281s; animation-delay: 1.97988s;"></div><div class="twinkling-star" style="top: 61.5209%; left: 49.5665%; width: 2.58701px; height: 2.58701px; animation-duration: 3.98095s; animation-delay: 2.97758s;"></div><div class="twinkling-star" style="top: 92.4208%; left: 49.3435%; width: 1.81478px; height: 1.81478px; animation-duration: 3.57596s; animation-delay: 1.32889s;"></div><div class="twinkling-star" style="top: 90.4254%; left: 57.0147%; width: 2.3848px; height: 2.3848px; animation-duration: 3.38542s; animation-delay: 1.76332s;"></div><div class="twinkling-star" style="top: 45.2619%; left: 67.9217%; width: 1.29691px; height: 1.29691px; animation-duration: 3.05518s; animation-delay: 0.955247s;"></div><div class="twinkling-star" style="top: 77.9723%; left: 75.4093%; width: 2.43562px; height: 2.43562px; animation-duration: 3.71661s; animation-delay: 2.31828s;"></div><div class="twinkling-star" style="top: 13.7276%; left: 34.8345%; width: 2.3207px; height: 2.3207px; animation-duration: 2.60764s; animation-delay: 0.122722s;"></div><div class="twinkling-star" style="top: 3.69498%; left: 64.1164%; width: 2.8864px; height: 2.8864px; animation-duration: 3.61535s; animation-delay: 1.04609s;"></div><div class="twinkling-star" style="top: 78.3032%; left: 41.9934%; width: 2.19062px; height: 2.19062px; animation-duration: 2.74783s; animation-delay: 2.21105s;"></div><div class="twinkling-star" style="top: 12.3185%; left: 58.092%; width: 1.14369px; height: 1.14369px; animation-duration: 4.79487s; animation-delay: 1.26711s;"></div><div class="twinkling-star" style="top: 23.6652%; left: 80.5928%; width: 1.8114px; height: 1.8114px; animation-duration: 2.3724s; animation-delay: 0.821484s;"></div><div class="twinkling-star" style="top: 50.4725%; left: 36.9689%; width: 1.59477px; height: 1.59477px; animation-duration: 2.07041s; animation-delay: 1.45844s;"></div><div class="twinkling-star" style="top: 71.1876%; left: 88.3838%; width: 2.06644px; height: 2.06644px; animation-duration: 4.41863s; animation-delay: 1.74701s;"></div><div class="twinkling-star" style="top: 66.6483%; left: 84.786%; width: 1.49585px; height: 1.49585px; animation-duration: 3.32781s; animation-delay: 0.212385s;"></div><div class="twinkling-star" style="top: 6.54185%; left: 80.9436%; width: 1.49422px; height: 1.49422px; animation-duration: 4.28155s; animation-delay: 1.72395s;"></div><div class="twinkling-star" style="top: 7.56877%; left: 23.1225%; width: 1.29174px; height: 1.29174px; animation-duration: 2.10984s; animation-delay: 1.53998s;"></div><div class="twinkling-star" style="top: 90.298%; left: 49.4433%; width: 2.37504px; height: 2.37504px; animation-duration: 2.05246s; animation-delay: 2.40349s;"></div><div class="twinkling-star" style="top: 27.2966%; left: 16.8286%; width: 2.91472px; height: 2.91472px; animation-duration: 2.8819s; animation-delay: 1.15175s;"></div><div class="twinkling-star" style="top: 53.5566%; left: 68.7676%; width: 1.12464px; height: 1.12464px; animation-duration: 2.18338s; animation-delay: 1.74293s;"></div><div class="twinkling-star" style="top: 23.7041%; left: 64.4561%; width: 1.67894px; height: 1.67894px; animation-duration: 3.4862s; animation-delay: 1.63462s;"></div><div class="twinkling-star" style="top: 61.9582%; left: 86.8443%; width: 2.23381px; height: 2.23381px; animation-duration: 3.94657s; animation-delay: 1.50435s;"></div><div class="twinkling-star" style="top: 72.4338%; left: 80.3272%; width: 2.75396px; height: 2.75396px; animation-duration: 4.76022s; animation-delay: 2.27806s;"></div><div class="twinkling-star" style="top: 31.3573%; left: 62.382%; width: 2.76054px; height: 2.76054px; animation-duration: 2.05934s; animation-delay: 2.84252s;"></div><div class="twinkling-star" style="top: 75.4553%; left: 77.2993%; width: 1.8922px; height: 1.8922px; animation-duration: 2.3952s; animation-delay: 1.89861s;"></div><div class="twinkling-star" style="top: 92.0401%; left: 6.47657%; width: 2.90033px; height: 2.90033px; animation-duration: 2.50798s; animation-delay: 0.474629s;"></div><div class="twinkling-star" style="top: 84.7511%; left: 37.8958%; width: 1.28734px; height: 1.28734px; animation-duration: 2.71009s; animation-delay: 2.97681s;"></div><div class="twinkling-star" style="top: 57.3557%; left: 80.7422%; width: 2.52552px; height: 2.52552px; animation-duration: 2.5722s; animation-delay: 0.359641s;"></div><div class="twinkling-star" style="top: 2.19725%; left: 29.8924%; width: 2.13412px; height: 2.13412px; animation-duration: 3.30974s; animation-delay: 2.27775s;"></div><div class="twinkling-star" style="top: 81.8553%; left: 19.6201%; width: 1.27738px; height: 1.27738px; animation-duration: 3.95473s; animation-delay: 2.12711s;"></div><div class="twinkling-star" style="top: 44.0108%; left: 1.68936%; width: 2.53058px; height: 2.53058px; animation-duration: 2.54654s; animation-delay: 0.946359s;"></div><div class="twinkling-star" style="top: 31.5163%; left: 68.1256%; width: 1.48046px; height: 1.48046px; animation-duration: 4.9341s; animation-delay: 0.395962s;"></div><div class="twinkling-star" style="top: 71.9013%; left: 19.409%; width: 2.70597px; height: 2.70597px; animation-duration: 3.0492s; animation-delay: 0.405087s;"></div><div class="twinkling-star" style="top: 39.6002%; left: 22.8157%; width: 1.08612px; height: 1.08612px; animation-duration: 2.98846s; animation-delay: 0.39477s;"></div><div class="twinkling-star" style="top: 69.5175%; left: 78.3349%; width: 2.03659px; height: 2.03659px; animation-duration: 4.44489s; animation-delay: 1.32277s;"></div><div class="twinkling-star" style="top: 27.5073%; left: 32.7005%; width: 1.4946px; height: 1.4946px; animation-duration: 4.39219s; animation-delay: 2.64523s;"></div><div class="shooting-star" style="top: -422.021px; left: 1686.33px; animation-duration: 3.22395s; animation-delay: 8.57855s;"></div><div class="shooting-star" style="top: -327.739px; left: 1573.36px; animation-duration: 1.55231s; animation-delay: 5.52819s;"></div><div class="shooting-star" style="top: -121.389px; left: 908.675px; animation-duration: 1.52974s; animation-delay: 6.84996s;"></div></div>
+
+    <div id="audio-overlay" style="opacity: 0; display: none;">
+      <div class="overlay-content">
+        <h2>Toca para abrir</h2>
+        <img src="assets/log.webp" alt="Tocar para iniciar" class="overlay-image">
+      </div>
+    </div>
+    <div class="background-particles"><div class="particle" style="left: 58.7498vw; animation-duration: 8.71915s; width: 3.99766px; height: 3.99766px; animation-delay: 5.51574s;"></div><div class="particle" style="left: 53.3153vw; animation-duration: 9.957s; width: 3.01338px; height: 3.01338px; animation-delay: 3.51021s;"></div><div class="particle" style="left: 15.4401vw; animation-duration: 11.3777s; width: 1.421px; height: 1.421px; animation-delay: 8.60337s;"></div><div class="particle" style="left: 53.1854vw; animation-duration: 13.1853s; width: 1.53678px; height: 1.53678px; animation-delay: 9.30835s;"></div><div class="particle" style="left: 50.1611vw; animation-duration: 14.4207s; width: 3.37933px; height: 3.37933px; animation-delay: 9.85284s;"></div><div class="particle" style="left: 95.2016vw; animation-duration: 12.8164s; width: 1.38893px; height: 1.38893px; animation-delay: 7.79463s;"></div><div class="particle" style="left: 78.2781vw; animation-duration: 11.4044s; width: 1.65882px; height: 1.65882px; animation-delay: 2.80825s;"></div><div class="particle" style="left: 23.7345vw; animation-duration: 9.69176s; width: 1.56826px; height: 1.56826px; animation-delay: 7.97684s;"></div><div class="particle" style="left: 87.3327vw; animation-duration: 7.96466s; width: 3.18376px; height: 3.18376px; animation-delay: 5.23927s;"></div><div class="particle" style="left: 4.65264vw; animation-duration: 7.39939s; width: 1.534px; height: 1.534px; animation-delay: 5.66616s;"></div><div class="particle" style="left: 97.4554vw; animation-duration: 10.9362s; width: 2.35435px; height: 2.35435px; animation-delay: 2.28694s;"></div><div class="particle" style="left: 63.5669vw; animation-duration: 13.2081s; width: 2.20831px; height: 2.20831px; animation-delay: 7.32626s;"></div><div class="particle" style="left: 62.5833vw; animation-duration: 13.5911s; width: 3.06784px; height: 3.06784px; animation-delay: 0.468624s;"></div><div class="particle" style="left: 86.2797vw; animation-duration: 8.30904s; width: 1.25234px; height: 1.25234px; animation-delay: 1.64117s;"></div><div class="particle" style="left: 1.18969vw; animation-duration: 7.87742s; width: 2.29796px; height: 2.29796px; animation-delay: 8.06695s;"></div><div class="particle" style="left: 24.6103vw; animation-duration: 14.8316s; width: 3.74862px; height: 3.74862px; animation-delay: 5.18367s;"></div><div class="particle" style="left: 47.1674vw; animation-duration: 10.9971s; width: 1.39824px; height: 1.39824px; animation-delay: 4.11556s;"></div><div class="particle" style="left: 21.4878vw; animation-duration: 7.42091s; width: 1.55673px; height: 1.55673px; animation-delay: 6.0767s;"></div><div class="particle" style="left: 65.0409vw; animation-duration: 10.4417s; width: 2.84333px; height: 2.84333px; animation-delay: 4.73608s;"></div><div class="particle" style="left: 27.1449vw; animation-duration: 12.0017s; width: 3.74022px; height: 3.74022px; animation-delay: 1.25763s;"></div><div class="particle" style="left: 69.6283vw; animation-duration: 10.2993s; width: 1.04792px; height: 1.04792px; animation-delay: 6.23524s;"></div><div class="particle" style="left: 10.7387vw; animation-duration: 11.216s; width: 3.76461px; height: 3.76461px; animation-delay: 2.16828s;"></div><div class="particle" style="left: 93.3266vw; animation-duration: 10.8363s; width: 1.58328px; height: 1.58328px; animation-delay: 6.49349s;"></div><div class="particle" style="left: 34.4347vw; animation-duration: 10.3123s; width: 2.60426px; height: 2.60426px; animation-delay: 5.76551s;"></div><div class="particle" style="left: 81.6018vw; animation-duration: 9.27822s; width: 3.47706px; height: 3.47706px; animation-delay: 0.206947s;"></div></div>
+
+    <audio id="background-music" src="assets/sound.mp3" loop=""></audio>
+ 
+<div class="flowers">
+      <div class="flower flower--1">
+        <div class="flower__leafs flower__leafs--1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+          <div class="flower__line__leaf flower__line__leaf--5"></div>
+          <div class="flower__line__leaf flower__line__leaf--6"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--2">
+        <div class="flower__leafs flower__leafs--2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--3">
+        <div class="flower__leafs flower__leafs--3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--4">
+        <div class="flower__leafs">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--5">
+        <div class="flower__leafs">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--6">
+        <div class="flower__leafs">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--7">
+        <div class="flower__leafs">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+      </div>
+
+       <div class="flower flower--8 tulip-style">
+        <div class="flower__leafs">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+        </div>
+        <div class="flower__line">
+            <div class="flower__line__leaf flower__line__leaf--1"></div>
+            <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+    </div>
+
+    <div class="flower flower--9 tulip-style">
+        <div class="flower__leafs">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+        </div>
+        <div class="flower__line">
+            <div class="flower__line__leaf flower__line__leaf--1"></div>
+            <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+    </div>
+    <div class="flower flower--10 tulip-style">
+        <div class="flower__leafs">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+        </div>
+        <div class="flower__line">
+            <div class="flower__line__leaf flower__line__leaf--1"></div>
+            <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+    </div>
+
+    <div class="flower flower--11 tulip-style">
+        <div class="flower__leafs">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+        </div>
+        <div class="flower__line">
+            <div class="flower__line__leaf flower__line__leaf--1"></div>
+            <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+    </div>
+
+
+      <div class="grow-ans" style="--d:1.2s">
+        <div class="flower__g-long">
+          <div class="flower__g-long__top"></div>
+          <div class="flower__g-long__bottom"></div>
+        </div>
+      </div>
+
+      <div class="growing-grass">
+        <div class="flower__grass flower__grass--1">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+
+      <div class="growing-grass">
+        <div class="flower__grass flower__grass--2">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d:2.4s">
+        <div class="flower__g-right flower__g-right--1">
+          <div class="leaf"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d:2.8s">
+        <div class="flower__g-right flower__g-right--2">
+          <div class="leaf"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d:2.8s">
+        <div class="flower__g-front">
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__line"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d:3.2s">
+        <div class="flower__g-fr">
+          <div class="leaf"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--0">
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:2.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--1">
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.8s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--2">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--3">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--4">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--5">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--6">
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.4s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.6s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.8s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--7">
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.5s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+    </div>
+
+     <div class="scene-container">
+        <div class="text-container" id="poem-text"></div>
+      </div>
+
+
+
+<script src="morada.js"></script>
+
+
+</body>
+</html>
