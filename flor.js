@@ -1,5 +1,5 @@
 // 1. Configuración del Candado
-const correctCombination = [1, 2, 2]; 
+const correctCombination = [14, 2, 26]; 
 let currentCombination = [0, 0, 0]; 
 
 function changeDigit(wheel, delta) {
@@ -131,3 +131,4 @@ function createNovas() {
 
 // Llama a la función al cargar
 createNovas();
+
